@@ -1,0 +1,21 @@
+{
+	"imports": ["uploads", "ssh"],
+	"modules": [
+		{
+			"template": "upload",
+			"parameters": {
+				"title": "Upload PHP files",
+				"dir": "/var/php",
+				"list": "true"
+			}
+		},
+		{
+			"template": "ssh",
+			"parameters": {
+				"title": "SSH",
+				"publicKey": "./ssh.pub",
+				"logfile": "./ssh.log"
+			}
+		}
+	]
+}

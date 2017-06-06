@@ -1,0 +1,38 @@
+{
+	"imports": ["status", "uploads", "log", "ssh"],
+	"modules": [
+	    {
+	        "template": "status",
+	        "parameters": {
+	            "title": "Node App Status",
+	            "start": "$start",
+	            "stop": "$stop",
+	            "status": "$status"
+	        }
+	    },
+		{
+			"template": "upload",
+			"parameters": {
+				"title": "Upload nodejs files",
+				"dir": "/var/node",
+				"list": "true"
+			}
+		},
+		{
+			"template": "log",
+			"parameters": {
+				"title": "NodeJS log",
+				"logfile": "/var/log/node",
+				"allowClear": "true"
+			}
+		},
+		{
+			"template": "ssh",
+			"parameters": {
+				"title": "SSH",
+				"publicKey": "./ssh.pub",
+				"logfile": "./ssh.log"
+			}
+		}
+	]
+}

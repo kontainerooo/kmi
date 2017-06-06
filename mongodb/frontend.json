@@ -1,0 +1,22 @@
+{
+	"imports": ["uploads", "ssh"],
+	"modules":[
+        {
+	        "template": "status",
+	        "parameters": {
+	            "title": "MongoDB Status",
+	            "start": "$start",
+	            "stop": "$stop",
+	            "status": "$status"
+	        }
+	    },
+		{
+			"template": "ssh",
+			"parameters": {
+				"title": "SSH",
+				"publicKey": "./ssh.pub",
+				"logfile": "./ssh.log"
+			}
+		}
+	]
+}

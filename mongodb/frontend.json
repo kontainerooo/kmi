@@ -5,9 +5,9 @@
 	        "template": "status",
 	        "parameters": {
 	            "title": "MongoDB Status",
-	            "start": "$start",
-	            "stop": "$stop",
-	            "status": "$status"
+	            "start": "$KROO_CMD_START",
+	            "stop": "$KROO_CMD_STOP",
+	            "status": "$KROO_CMD_STATUS"
 	        }
 	    },
 		{

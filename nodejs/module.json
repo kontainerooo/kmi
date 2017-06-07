@@ -10,10 +10,10 @@
         "HTTP": 3000
     },
     "cmd": {
-        "start": "npm start",
-        "install": "npm install",
+        "start": "cd /var/node && npm start",
+        "install": "cd /var/node && npm install",
         "stop": "pgrep node | kill $(xargs)",
-        "status": "pgrep mongod | wc -l"
+        "status": "pgrep node | wc -l"
     },
     "resources": {
         "cpus": "2",

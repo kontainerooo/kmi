@@ -15,7 +15,7 @@
             "parameters": {
                 "install": "eval $KROO_CMD_INSTALL"
             }
-        }
+        },
 		{
 			"template": "upload",
 			"parameters": {

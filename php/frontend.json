@@ -1,6 +1,14 @@
 {
-	"imports": ["uploads", "ssh"],
-	"modules": [
+	"imports": ["status", "uploads", "ssh"],
+	"modules": [{
+			"template": "status",
+			"parameters": {
+				"title": "PHP Server Status",
+				"start": "eval $KROO_CMD_START",
+				"stop": "eval $KROO_CMD_STOP",
+				"status": "eval $KROO_CMD_STATUS"
+			}
+		},
 		{
 			"template": "upload",
 			"parameters": {

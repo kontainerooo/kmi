@@ -1,21 +1,20 @@
 {
 	"imports": ["status", "install", "uploads", "log", "ssh"],
-	"modules": [
-	    {
-	        "template": "status",
-	        "parameters": {
-	            "title": "Node App Status",
-	            "start": "eval $KROO_CMD_START",
-	            "stop": "eval $KROO_CMD_STOP",
-	            "status": "eval $KROO_CMD_STATUS"
-	        }
-	    },
-        {
-            "template": "install",
-            "parameters": {
-                "install": "eval $KROO_CMD_INSTALL"
-            }
-        },
+	"modules": [{
+			"template": "status",
+			"parameters": {
+				"title": "Node App Status",
+				"start": "eval $KROO_CMD_START",
+				"stop": "eval $KROO_CMD_STOP",
+				"status": "eval $KROO_CMD_STATUS"
+			}
+		},
+		{
+			"template": "install",
+			"parameters": {
+				"install": "eval $KROO_CMD_INSTALL"
+			}
+		},
 		{
 			"template": "upload",
 			"parameters": {

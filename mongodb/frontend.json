@@ -1,15 +1,14 @@
 {
 	"imports": ["uploads", "ssh"],
-	"modules":[
-        {
-	        "template": "status",
-	        "parameters": {
-	            "title": "MongoDB Status",
-	            "start": "eval $KROO_CMD_START",
-	            "stop": "eval $KROO_CMD_STOP",
-	            "status": "eval $KROO_CMD_STATUS"
-	        }
-	    },
+	"modules": [{
+			"template": "status",
+			"parameters": {
+				"title": "MongoDB Status",
+				"start": "eval $KROO_CMD_START",
+				"stop": "eval $KROO_CMD_STOP",
+				"status": "eval $KROO_CMD_STATUS"
+			}
+		},
 		{
 			"template": "ssh",
 			"parameters": {

@@ -1,22 +1,23 @@
 {
-    "name": "PHP",
-    "version": "0.0.1",
-    "description": "Basic PHP module",
-    "type": 3,
-    "provisionScript": "./provision.sh",
-    "frontend": "./frontend.json",
-    "env": {},
-    "interfaces": {
-        "HTTP": 8080
-    },
-    "cmd": {
-        "start": "cd /var/php/ && php -S 0.0.0.0:$KROO_HTTP",
-        "stop": "pgrep php | kill $(xargs)",
-        "status": "pgrep mongod | wc -l"
-    },
-    "resources": {
-        "cpus": "2",
-        "mem": 536870911,
-        "swap": 1073741823
-    }
+	"name": "PHP",
+	"version": "0.0.1",
+	"description": "Basic PHP module",
+	"type": 3,
+	"provisionScript": "./provision.sh",
+	"frontend": "./frontend.json",
+	"env": {},
+	"interfaces": {
+		"HTTP": 8080
+	},
+	"cmd": {
+		"start": "cd /var/php/ && php -S 0.0.0.0:$KROO_HTTP",
+		"stop": "pgrep php | kill $(xargs)",
+		"status": "pgrep php | wc -l",
+		"getip": "ip addr show eth0 | grep -Po 'inet \K[\d.]+'"
+	},
+	"resources": {
+		"cpus": "2",
+		"mem": 536870911,
+		"swap": 1073741823
+	}
 }

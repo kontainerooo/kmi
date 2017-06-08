@@ -13,7 +13,8 @@
         "start": "cd /var/node && npm start",
         "install": "cd /var/node && npm install",
         "stop": "pgrep node | kill $(xargs)",
-        "status": "pgrep node | wc -l"
+        "status": "pgrep node | wc -l",
+        "getip": "ip addr show eth0 | grep -Po 'inet \K[\d.]+'"
     },
     "resources": {
         "cpus": "2",

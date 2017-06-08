@@ -1,22 +1,23 @@
 {
-    "name": "MongoDB",
-    "version": "0.0.1",
-    "description": "Basic MongoDB module",
-    "type": 2,
-    "provisionScript": "./provision.sh",
-    "frontend": "./frontend.json",
-    "env": {},
-    "interfaces": {
-        "MONGO": 27017
-    },
-    "cmd": {
-        "start": "mongod --port $KROO_MONGO",
-        "stop": "pgrep mongod | kill $(xargs)",
-        "status": "pgrep mongod | wc -l"
-    },
-    "resources": {
-        "cpus": "2",
-        "mem": 536870911,
-        "swap": 1073741823
-    }
+	"name": "MongoDB",
+	"version": "0.0.1",
+	"description": "Basic MongoDB module",
+	"type": 2,
+	"provisionScript": "./provision.sh",
+	"frontend": "./frontend.json",
+	"env": {},
+	"interfaces": {
+		"MONGO": 27017
+	},
+	"cmd": {
+		"start": "mongod --port $KROO_MONGO",
+		"stop": "pgrep mongod | kill $(xargs)",
+		"status": "pgrep mongod | wc -l",
+		"getip": "ip addr show eth0 | grep -Po 'inet \K[\d.]+'"
+	},
+	"resources": {
+		"cpus": "2",
+		"mem": 536870911,
+		"swap": 1073741823
+	}
 }
